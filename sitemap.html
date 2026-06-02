@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sitemap &amp; Credits — The Mule Bar & Grill</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .credits-table { width: 100%; border-collapse: collapse; }
+    .credits-table thead th {
+      background: var(--green); color: #fff;
+      padding: 13px 20px; text-align: left;
+      font-size: 13px; font-weight: 700;
+      letter-spacing: .05em; text-transform: uppercase;
+    }
+    .credits-table tbody td {
+      padding: 13px 20px; border-bottom: 1px solid var(--cream-dark);
+      font-size: 15px; vertical-align: top;
+    }
+    .credits-table tbody tr:last-child td { border-bottom: none; }
+    .credits-table tbody tr:hover td { background: var(--cream); }
+    .credits-table a { color: var(--saffron); font-weight: 600; }
+    .credits-table a:hover { color: var(--green); }
+
+    .sitemap-tree { list-style: none; }
+    .sitemap-tree > li { margin-bottom: 6px; }
+    .sitemap-tree .page-row {
+      display: flex; align-items: center; gap: 14px;
+      padding: 14px 20px; border-bottom: 1px solid var(--cream-dark);
+    }
+    .sitemap-tree li:last-child .page-row { border-bottom: none; }
+    .page-num {
+      width: 30px; height: 30px; background: var(--green-pale);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 12px; font-weight: 700; color: var(--green); flex-shrink: 0;
+    }
+    .page-info { flex: 1; }
+    .page-info a { color: var(--green); font-weight: 700; font-size: 15px; }
+    .page-info a:hover { color: var(--saffron); }
+    .page-info .filename {
+      font-size: 12px; color: var(--text-muted);
+      font-family: 'Courier New', monospace; margin-top: 2px; display: block;
+    }
+    .page-info .desc { font-size: 13px; color: var(--text-muted); margin-top: 2px; }
+    .page-badge {
+      font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 20px;
+      letter-spacing: .06em; text-transform: uppercase;
+    }
+    .badge-html { background: var(--green-pale); color: var(--green); }
+    .badge-js   { background: var(--saffron-lt); color: #9a6318; }
+    .badge-sub  { background: #f0f0f0; color: #666; }
+
+    .sub-pages {
+      list-style: none;
+      margin-left: 44px;
+      border-left: 2px solid var(--cream-dark);
+      padding-left: 20px;
+    }
+    .sub-pages li {
+      padding: 8px 0; border-bottom: 1px solid var(--cream-dark);
+      font-size: 14px;
+    }
+    .sub-pages li:last-child { border-bottom: none; }
+    .sub-pages a { color: var(--green); font-weight: 600; }
+    .sub-pages a:hover { color: var(--saffron); }
+    .sub-pages .filename { font-size: 12px; color: var(--text-muted); font-family: 'Courier New', monospace; margin-left: 8px; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="home.html" class="nav-brand">
+    <span class="nav-brand-icon">
+      <img src="https://img1.wsimg.com/isteam/ip/c37bc47f-5d77-4b1c-9dd4-02d4ca72ed7f/The%20Mule%20Logo%20Circle.png/:/rs=w:315,h:210,cg:true,m/cr=w:315,h:210/qt=q:95" alt="The Mule Bar & Grill Logo">
+    </span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li class="nav-dropdown">
+      <a href="#">Menu</a>
+      <div class="dropdown-panel">
+        <a href="calendar.html">Calendar</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="menulist.html">Menu List</a>
+      </div>
+    </li>
+    <li><a href="order.html">Order</a></li>
+    <li><a href="location.html">Location</a></li>
+    <li><a href="sitemap.html" class="active">Sitemap</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <div class="container page-header-inner">
+    <h1>Sitemap &amp; Credits</h1>
+    <p>All pages on this website, and the sources that made it possible</p>
+  </div>
+</div>
+
+<main>
+
+  <!-- ── SITEMAP ─────────────────────────────────────────────────────────── -->
+  <section class="section">
+    <div class="container">
+      <p class="section-label">Navigation Overview</p>
+      <h2 class="section-title">Site Map</h2>
+      <div class="title-bar"></div>
+      <p style="color:var(--text-muted); margin-bottom:32px; font-size:15px;">
+        Every page on The Mule Bar & Grill website is listed below with its filename, description, and the technologies used.
+      </p>
+
+      <div class="order-wrapper">
+        <ul class="sitemap-tree">
+
+          <!-- 1. HOME -->
+          <li>
+            <div class="page-row">
+              <span class="page-num">1</span>
+              <div class="page-info">
+                <a href="home.html">Home</a>
+                <span class="filename">home.html</span>
+                <span class="desc">Landing page — hero banner, mission statement, featured dishes, and customer reviews.</span>
+              </div>
+              <span class="page-badge badge-html">HTML</span>
+            </div>
+          </li>
+
+          <!-- 2. ABOUT -->
+          <li>
+            <div class="page-row">
+              <span class="page-num">2</span>
+              <div class="page-info">
+                <a href="about.html">About</a>
+                <span class="filename">about.html</span>
+                <span class="desc">Our story, values, and meet-the-team section for The Mule Bar & Grill.</span>
+              </div>
+              <span class="page-badge badge-html">HTML</span>
+            </div>
+          </li>
+
+          <!-- 3. MENU (parent with sub-pages) -->
+          <li>
+            <div class="page-row">
+              <span class="page-num">3</span>
+              <div class="page-info">
+                <span style="color:var(--text); font-weight:700; font-size:15px;">Menu</span>
+                <span class="filename">— (dropdown navigation group)</span>
+                <span class="desc">The "Menu" nav item opens a dropdown with three child pages: Calendar, Gallery, and Menu List.</span>
+              </div>
+              <span class="page-badge badge-sub">DROPDOWN</span>
+            </div>
+            <ul class="sub-pages">
+              <li>
+                <a href="calendar.html">Calendar</a>
+                <span class="filename">calendar.html</span>
+                — Monthly events calendar with special dining nights and seasonal menus.
+              </li>
+              <li>
+                <a href="gallery.html">Gallery</a>
+                <span class="filename">gallery.html</span>
+                — Photo gallery showcasing Italian and Indian dishes, and the restaurant interior.
+              </li>
+              <li>
+                <a href="menulist.html">Menu List</a>
+                <span class="filename">menulist.html</span>
+                — Full menu listing of all Italian and Indian dishes with descriptions and prices.
+              </li>
+            </ul>
+          </li>
+
+          <!-- 4. ORDER -->
+          <li>
+            <div class="page-row">
+              <span class="page-num">4</span>
+              <div class="page-info">
+                <a href="order.html">Order</a>
+                <span class="filename">order.html + order.js</span>
+                <span class="desc">Interactive order form — select menu items via checkboxes; JavaScript calculates subtotal, HST (13%), and total in real time.</span>
+              </div>
+              <span class="page-badge badge-js">HTML + JS</span>
+            </div>
+          </li>
+
+          <!-- 5. LOCATION -->
+          <li>
+            <div class="page-row">
+              <span class="page-num">5</span>
+              <div class="page-info">
+                <a href="location.html">Location</a>
+                <span class="filename">location.html</span>
+                <span class="desc">Address, opening hours, and embedded Google Map.</span>
+              </div>
+              <span class="page-badge badge-html">HTML</span>
+            </div>
+          </li>
+
+          <!-- 6. CONTACT -->
+          <li>
+            <div class="page-row">
+              <span class="page-num">6</span>
+              <div class="page-info">
+                <a href="contact.html">Contact</a>
+                <span class="filename">contact.html</span>
+                <span class="desc">Contact form (name, email, message) and restaurant contact details including address, email, and social media links.</span>
+              </div>
+              <span class="page-badge badge-html">HTML</span>
+            </div>
+          </li>
+
+          <!-- 7. SITEMAP -->
+          <li>
+            <div class="page-row">
+              <span class="page-num">7</span>
+              <div class="page-info">
+                <a href="sitemap.html">Sitemap &amp; Credits</a>
+                <span class="filename">sitemap.html</span>
+                <span class="desc">This page — a complete list of all pages on the website plus acknowledgements for images, references, and tools used.</span>
+              </div>
+              <span class="page-badge badge-html">HTML</span>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CREDITS ─────────────────────────────────────────────────────────── -->
+  <section class="section-sm">
+    <div class="container">
+      <p class="section-label">Acknowledgements</p>
+      <h2 class="section-title">Credits</h2>
+      <div class="title-bar"></div>
+      <p style="color:var(--text-muted); margin-bottom:32px; font-size:15px;">
+        The following external resources were used in the development of this website.
+      </p>
+
+      <div class="order-wrapper">
+        <table class="credits-table">
+          <thead>
+            <tr>
+              <th style="width:200px;">Category</th>
+              <th>Resource</th>
+              <th style="width:260px;">Source URL</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <!-- FOOD PHOTOGRAPHY -->
+            <tr>
+              <td style="font-weight:700; color:var(--green);"> Photography</td>
+              <td>Restaurant photography used as visual reference from restaurant's official website</td>
+              <td><a href="https://mulebarandgrill.com/photo-gallery" target="_blank">mulebarandgrill.com</a></td>
+            </tr>
+            <tr>
+              <td style="font-weight:700; color:var(--green);"> Food Photography</td>
+              <td>Additional food imagery reference for Indian and Italian cuisine</td>
+              <td><a href="https://www.pexels.com" target="_blank">pexels.com</a></td>
+            </tr>
+
+            <!-- MENU CONTENT -->
+            <tr>
+              <td style="font-weight:700; color:var(--green);"> Menu Reference</td>
+              <td>Menu item use from the restaurant's official menu (The Mule Bar & Grill)</td>
+              <td><a href="https://mulebarandgrill.com/" target="_blank">nandos.ca/food/menu</a></td>
+            </tr>
+
+            <!-- LOCATION -->
+            <tr>
+              <td style="font-weight:700; color:var(--green);"> Maps</td>
+              <td>Embedded interactive map for restaurant location at 49 Winter Street, Sussex, NB</td>
+              <td><a href="https://maps.google.com" target="_blank">maps.google.com</a></td>
+            </tr>
+
+            <!-- ICONS & FONTS -->
+            <tr>
+              <td style="font-weight:700; color:var(--green);"> Icons</td>
+              <td>Open-source icon library used for UI icons throughout the site (navigation, contact details)</td>
+              <td><a href="https://www.flaticon.com/" target="_blank">flaticon.com</a></td>
+            </tr>
+
+            <!-- COLOUR & DESIGN -->
+            <tr>
+              <td style="font-weight:700; color:var(--green);"> Colour Reference</td>
+              <td>Colour palette planning and accessibility contrast checking</td>
+              <td><a href="https://coolors.co" target="_blank">coolors.co</a></td>
+            </tr>
+
+            <!-- TECH -->
+            <tr>
+              <td style="font-weight:700; color:var(--green);"> Technologies</td>
+              <td>All pages built with semantic HTML5, CSS3 (custom properties, grid, flexbox), and vanilla JavaScript — no frameworks or libraries</td>
+              <td>—</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- FILE STRUCTURE -->
+  <section class="section-sm">
+    <div class="container">
+      <p class="section-label">Project Structure</p>
+      <h2 class="section-title">File listing</h2>
+      <div class="title-bar"></div>
+      <div class="info-box">
+        <pre style="font-family:'Courier New',monospace; font-size:14px; color:var(--text-muted); line-height:2;">
+<span style="color:var(--green); font-weight:700;">progress-restaurant/</span>
+├── <span style="color:var(--green);">home.html</span>         — Home page
+├── <span style="color:var(--green);">about.html</span>        — About page
+├── <span style="color:var(--green);">menulist.html</span>     — Full menu list
+├── <span style="color:var(--green);">calendar.html</span>     — Events calendar
+├── <span style="color:var(--green);">gallery.html</span>      — Photo gallery
+├── <span style="color:var(--green);">order.html</span>        — Online order form
+├── <span style="color:var(--saffron); font-weight:700;">order.js</span>          — Order form JavaScript
+├── <span style="color:var(--green);">location.html</span>     — Location &amp; hours
+├── <span style="color:var(--green);">contact.html</span>      — Contact form
+├── <span style="color:var(--green);">sitemap.html</span>      — Sitemap &amp; credits (this page)
+└── <span style="color:var(--saffron); font-weight:700;">style.css</span>         — Shared stylesheet (all pages)
+        </pre>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer style="align-items: center; text-align: center; padding: 32px 16px; background: var(--green); color: white; display: flex; flex-direction: column; gap: 12px;">
+
+  <div class="footer-links">
+    <a href="about.html">About</a>
+    <a href="menulist.html">Menu</a>
+    <a href="order.html">Order</a>
+    <a href="contact.html">Contact</a>
+    <a href="sitemap.html">Sitemap</a>
+  </div>
+  <span>© The Mule Bar & Grill · Sussex</span>
+</footer>
+
+</body>
+</html>

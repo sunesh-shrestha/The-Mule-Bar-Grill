@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order — The Mule Bar & Grill</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="home.html" class="nav-brand">
+    <span class="nav-brand-icon">
+      <img src="https://img1.wsimg.com/isteam/ip/c37bc47f-5d77-4b1c-9dd4-02d4ca72ed7f/The%20Mule%20Logo%20Circle.png/:/rs=w:315,h:210,cg:true,m/cr=w:315,h:210/qt=q:95" alt="The Mule Bar & Grill Logo">
+    </span>
+    The Mule Bar & Grill
+  </a>
+  <ul class="nav-links">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li class="nav-dropdown">
+      <a href="#">Menu</a>
+      <div class="dropdown-panel">
+        <a href="calendar.html">Calendar</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="menulist.html">Menu List</a>
+      </div>
+    </li>
+    <li><a href="order.html" class="active">Order</a></li>
+    <li><a href="location.html">Location</a></li>
+    <li><a href="sitemap.html">Sitemap</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <div class="container page-header-inner">
+    <h1>Place an Order</h1>
+    <p>Select your items below — we'll have everything ready for you</p>
+  </div>
+</div>
+
+<main>
+  <section class="section">
+    <div class="container">
+
+      <p class="section-label">Your Selection</p>
+      <h2 class="section-title">Build your order</h2>
+      <div class="title-bar"></div>
+
+      <div class="order-wrapper">
+        <table class="order-table" id="orderTable">
+          <thead>
+            <tr>
+              <th style="width:60px;">Select</th>
+              <th>Menu Item</th>
+              <th style="width:120px; text-align:right;">Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- MAINS -->
+            <tr class="order-cat-header">
+              <td colspan="3"> Mains</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" data-price="20.00" data-name="3 PC Fried Chicken Dinner"></td>
+              <td>3 PC Fried Chicken Dinner <span style="font-size:13px; color:var(--text-muted);">— 2 pc available for $16.00</span></td>
+              <td style="text-align:right; color:var(--saffron); font-weight:700;">$20.00</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" data-price="20.00" data-name="Chicken Finger Platter"></td>
+              <td>Chicken Finger Platter <span style="font-size:13px; color:var(--text-muted);">— pub-style chicken fingers platter</span></td>
+              <td style="text-align:right; color:var(--saffron); font-weight:700;">$20.00</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" data-price="20.00" data-name="Shepherd's Pie w Garlic Bread"></td>
+              <td>Shepherd's Pie w Garlic Bread <span style="font-size:13px; color:var(--text-muted);">— home-style shepherd's pie with garlic bread</span></td>
+              <td style="text-align:right; color:var(--saffron); font-weight:700;">$20.00</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" data-price="20.00" data-name="Turkey Dinner"></td>
+              <td>Turkey Dinner <span style="font-size:13px; color:var(--text-muted);">— home-style turkey dinner</span></td>
+              <td style="text-align:right; color:var(--saffron); font-weight:700;">$20.00</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" data-price="32.00" data-name="BBQ Ribs Full Rack"></td>
+              <td>BBQ Ribs Full Rack <span style="font-size:13px; color:var(--text-muted);">— half rack available for $24.00</span></td>
+              <td style="text-align:right; color:var(--saffron); font-weight:700;">$32.00</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" data-price="32.00" data-name="Ribs & Wings"></td>
+              <td>Ribs &amp; Wings <span style="font-size:13px; color:var(--text-muted);">— half rack ribs and 5 chicken wings</span></td>
+              <td style="text-align:right; color:var(--saffron); font-weight:700;">$32.00</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" data-price="32.00" data-name="10 oz Striploin Steak"></td>
+              <td>10 oz Striploin Steak <span style="font-size:13px; color:var(--text-muted);">— or our 7 oz striploin for $24.00</span></td>
+              <td style="text-align:right; color:var(--saffron); font-weight:700;">$32.00</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" data-price="15.00" data-name="Fish and Chips"></td>
+              <td>Fish and Chips <span style="font-size:13px; color:var(--text-muted);">— large in-house battered fish, fresh-cut fries &amp; tartar sauce</span></td>
+              <td style="text-align:right; color:var(--saffron); font-weight:700;">$15.00</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" data-price="20.00" data-name="Fish Tacos"></td>
+              <td>Fish Tacos <span style="font-size:13px; color:var(--text-muted);">— 3 fish tacos with a side of tortilla chips</span></td>
+              <td style="text-align:right; color:var(--saffron); font-weight:700;">$20.00</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" data-price="22.00" data-name="Hamburger Steak and Onions"></td>
+              <td>Hamburger Steak and Onions <span style="font-size:13px; color:var(--text-muted);">— 2 patties smothered in fried onions &amp; gravy</span></td>
+              <td style="text-align:right; color:var(--saffron); font-weight:700;">$22.00</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" data-price="22.00" data-name="Tenderloin Tips"></td>
+              <td>Tenderloin Tips <span style="font-size:13px; color:var(--text-muted);">— tender tips pub-style</span></td>
+              <td style="text-align:right; color:var(--saffron); font-weight:700;">$22.00</td>
+            </tr>
+
+            <!-- DESSERTS -->
+            <tr class="order-cat-header">
+              <td colspan="3"> Desserts</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" data-price="10.00" data-name="Mule Ears (Pastry)"></td>
+              <td>Mule Ears <span style="font-size:13px; color:var(--text-muted);">— house-made pastry</span></td>
+              <td style="text-align:right; color:var(--saffron); font-weight:700;">$10.00</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" data-price="10.00" data-name="Apple Crisp"></td>
+              <td>Apple Crisp <span style="font-size:13px; color:var(--text-muted);">— classic warm apple crisp</span></td>
+              <td style="text-align:right; color:var(--saffron); font-weight:700;">$10.00</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" data-price="10.00" data-name="Cheesecake"></td>
+              <td>Cheesecake <span style="font-size:13px; color:var(--text-muted);">— house cheesecake</span></td>
+              <td style="text-align:right; color:var(--saffron); font-weight:700;">$10.00</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" data-price="12.00" data-name="Deep-Fried Cheesecake"></td>
+              <td>Deep-Fried Cheesecake <span style="font-size:13px; color:var(--text-muted);">— golden deep-fried cheesecake</span></td>
+              <td style="text-align:right; color:var(--saffron); font-weight:700;">$12.00</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" data-price="12.00" data-name="Deep-Fried Mars Bar"></td>
+              <td>Deep-Fried Mars Bar <span style="font-size:13px; color:var(--text-muted);">— a pub classic treat</span></td>
+              <td style="text-align:right; color:var(--saffron); font-weight:700;">$12.00</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" data-price="10.00" data-name="White Choc. Brownie Cake"></td>
+              <td>White Choc. Brownie Cake <span style="font-size:13px; color:var(--text-muted);">— rich white chocolate brownie cake</span></td>
+              <td style="text-align:right; color:var(--saffron); font-weight:700;">$10.00</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" data-price="10.00" data-name="Donut Balls"></td>
+              <td>Donut Balls <span style="font-size:13px; color:var(--text-muted);">— bite-sized donut balls</span></td>
+              <td style="text-align:right; color:var(--saffron); font-weight:700;">$10.00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- TOTALS -->
+      <div class="totals-box">
+        <div class="total-row">
+          <span>Item subtotal</span>
+          <span id="subtotal">$0.00</span>
+        </div>
+        <div class="total-row">
+          <span>HST (13%)</span>
+          <span id="tax">$0.00</span>
+        </div>
+        <div class="total-row final">
+          <span>Total</span>
+          <span id="total">$0.00</span>
+        </div>
+      </div>
+
+      <!-- SELECTED ITEMS SUMMARY -->
+      <div id="orderSummary" style="display:none; margin-top:20px;" class="info-box">
+        <h3 style="font-family:'Cormorant Garamond',serif; font-size:22px; color:var(--green); margin-bottom:12px;">Your Order</h3>
+        <ul id="selectedList" style="list-style:none; font-size:15px; color:var(--text-muted); line-height:2;"></ul>
+      </div>
+
+      <!-- SUBMIT -->
+      <div style="margin-top: 24px; display:flex; align-items:center; gap: 16px;">
+        <button class="btn btn-saffron" id="submitBtn">Submit Order</button>
+        <button class="btn" style="background:transparent; color:var(--text-muted); border:1.5px solid var(--cream-dark); box-shadow:none;" id="clearBtn">Clear Selection</button>
+      </div>
+
+      <!-- SUCCESS MESSAGE -->
+      <div id="successMsg" style="display:none; margin-top:24px; background:var(--green-pale); border-radius:var(--radius); padding:24px; border-left:4px solid var(--green);">
+        <h3 style="font-family:'Cormorant Garamond',serif; font-size:24px; color:var(--green); margin-bottom:8px;">Order Received!</h3>
+        <p style="color:var(--text-muted); font-size:15px;" id="successText"></p>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer style="align-items: center; text-align: center; padding: 32px 16px; background: var(--green); color: white; display: flex; flex-direction: column; gap: 12px;">
+
+  <div class="footer-links">
+    <a href="about.html">About</a>
+    <a href="menulist.html">Menu</a>
+    <a href="order.html">Order</a>
+    <a href="contact.html">Contact</a>
+    <a href="sitemap.html">Sitemap</a>
+  </div>
+  <span>© The Mule Bar & Grill · Sussex</span>
+</footer>
+
+<script src="order.js"></script>
+</body>
+</html>

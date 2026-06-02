@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu — The Mule Bar &amp; Grill</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ── MENU PAGE OVERRIDES ───────────────────────────── */
+    .menu-section { padding: 64px 0 40px; }
+    .menu-section + .menu-section { padding-top: 0; }
+
+    /* Category banner */
+    .cat-banner {
+      display: flex; align-items: center; gap: 18px;
+      margin-bottom: 32px;
+    }
+    .cat-banner-bar {
+      flex: 1; height: 3px; background: var(--saffron); border-radius: 2px;
+    }
+    .cat-banner h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px; font-weight: 700;
+      color: var(--green); white-space: nowrap;
+      letter-spacing: .01em;
+    }
+    .cat-banner .cat-label {
+      font-size: 11px; font-weight: 700; color: var(--saffron);
+      letter-spacing: .18em; text-transform: uppercase;
+      display: block; margin-bottom: 2px;
+    }
+
+    /* Photo card grid */
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    /* Individual card */
+    .photo-card {
+      background: var(--white);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 2px 16px rgba(42,77,18,.10);
+      border: 1px solid var(--cream-dark);
+      transition: transform .25s ease, box-shadow .25s ease;
+      display: flex; flex-direction: column;
+    }
+    .photo-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 36px rgba(42,77,18,.18);
+    }
+
+    /* Image area */
+    .photo-card-img {
+      width: 100%; aspect-ratio: 4/3;
+      object-fit: cover; display: block;
+      background: var(--green-pale);
+    }
+    /* Fallback emoji placeholder if no img */
+    .photo-card-emoji {
+      width: 100%; aspect-ratio: 4/3;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 64px;
+      background: linear-gradient(135deg, var(--green-pale) 0%, var(--saffron-lt) 100%);
+    }
+
+    /* Card body */
+    .photo-card-body {
+      padding: 18px 20px 20px;
+      flex: 1; display: flex; flex-direction: column;
+    }
+    .photo-card-body h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 21px; font-weight: 700;
+      color: var(--text); margin-bottom: 5px; line-height: 1.2;
+    }
+    .photo-card-body p {
+      font-size: 13px; color: var(--text-muted);
+      line-height: 1.6; flex: 1; margin-bottom: 14px;
+    }
+
+    /* Price row */
+    .card-price-row {
+      display: flex; align-items: center;
+      justify-content: space-between; flex-wrap: wrap; gap: 6px;
+      margin-top: auto;
+    }
+    .card-price {
+      font-size: 20px; font-weight: 800;
+      color: var(--saffron);
+    }
+    .card-price-note {
+      font-size: 12px; color: var(--text-muted);
+      background: var(--cream); border-radius: 20px;
+      padding: 3px 10px; font-weight: 600;
+    }
+
+    /* Alt section bg */
+    .menu-section-alt { background: var(--white); }
+
+    /* CTA strip */
+    .menu-cta {
+      background: var(--green);
+      padding: 48px 0; text-align: center; margin-top: 0;
+    }
+    .menu-cta h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 38px; color: #fff; margin-bottom: 10px;
+    }
+    .menu-cta p { color: rgba(255,255,255,.72); margin-bottom: 28px; font-size: 16px; }
+
+    @media (max-width: 900px) { .photo-grid { grid-template-columns: repeat(2,1fr); } }
+    @media (max-width: 540px) { .photo-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="home.html" class="nav-brand">
+    <span class="nav-brand-icon">
+      <img src="https://img1.wsimg.com/isteam/ip/c37bc47f-5d77-4b1c-9dd4-02d4ca72ed7f/The%20Mule%20Logo%20Circle.png/:/rs=w:315,h:210,cg:true,m/cr=w:315,h:210/qt=q:95" alt="The Mule Bar &amp; Grill Logo" style="width:32px;height:32px;object-fit:contain;border-radius:50%;">
+    </span>
+    The Mule Bar &amp; Grill
+  </a>
+  <ul class="nav-links">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li class="nav-dropdown">
+      <a href="#" class="active">Menu</a>
+      <div class="dropdown-panel">
+        <a href="calendar.html">Calendar</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="menulist.html">Menu List</a>
+      </div>
+    </li>
+    <li><a href="order.html">Order</a></li>
+    <li><a href="location.html">Location</a></li>
+    <li><a href="sitemap.html">Sitemap</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <div class="container page-header-inner">
+    <h1>Our Menu</h1>
+    <p>Pub classics &amp; home-style favourites — made fresh every day in Sussex, NB</p>
+  </div>
+</div>
+
+<main>
+
+  <!-- ── MAINS ── -->
+  <section class="menu-section">
+    <div class="container">
+      <div class="cat-banner">
+        <div>
+          <span class="cat-label">Pub Favourites</span>
+          <h2>Mains</h2>
+        </div>
+        <div class="cat-banner-bar"></div>
+      </div>
+
+      <div class="photo-grid">
+
+        <div class="photo-card">
+          <img class="photo-card-img"
+            src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=600&q=80"
+            alt="3 PC Fried Chicken Dinner" loading="lazy">
+          <div class="photo-card-body">
+            <h3>3 PC Fried Chicken Dinner</h3>
+            <p>Golden crispy fried chicken with your choice of sides.</p>
+            <div class="card-price-row">
+              <span class="card-price">$20.00</span>
+              <span class="card-price-note">2 pc for $16.00</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-card">
+          <img class="photo-card-img"
+            src="https://images.unsplash.com/photo-1562967916-eb82221dfb92?w=600&q=80"
+            alt="Chicken Finger Platter" loading="lazy">
+          <div class="photo-card-body">
+            <h3>Chicken Finger Platter</h3>
+            <p>Crispy pub-style chicken fingers served with dipping sauce and fries.</p>
+            <div class="card-price-row">
+              <span class="card-price">$20.00</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-card">
+          <img class="photo-card-img"
+            src="https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=600&q=80"
+            alt="Shepherd's Pie" loading="lazy">
+          <div class="photo-card-body">
+            <h3>Shepherd's Pie w Garlic Bread</h3>
+            <p>Home-style shepherd's pie topped with creamy mashed potato, served with garlic bread.</p>
+            <div class="card-price-row">
+              <span class="card-price">$20.00</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-card">
+          <img class="photo-card-img"
+            src="https://images.unsplash.com/photo-1580554530778-ca36943938b2?w=600&q=80"
+            alt="Turkey Dinner" loading="lazy">
+          <div class="photo-card-body">
+            <h3>Turkey Dinner</h3>
+            <p>Classic home-style turkey dinner with all the fixings.</p>
+            <div class="card-price-row">
+              <span class="card-price">$20.00</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-card">
+          <img class="photo-card-img"
+            src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80"
+            alt="BBQ Ribs Full Rack" loading="lazy">
+          <div class="photo-card-body">
+            <h3>BBQ Ribs Full Rack</h3>
+            <p>Slow-smoked, fall-off-the-bone BBQ pork ribs basted in house sauce.</p>
+            <div class="card-price-row">
+              <span class="card-price">$32.00</span>
+              <span class="card-price-note">Half rack $24.00</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-card">
+          <img class="photo-card-img"
+            src="https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=600&q=80"
+            alt="Ribs and Wings" loading="lazy">
+          <div class="photo-card-body">
+            <h3>Ribs &amp; Wings</h3>
+            <p>Half rack of BBQ ribs plus 5 crispy chicken wings.</p>
+            <div class="card-price-row">
+              <span class="card-price">$32.00</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-card">
+          <img class="photo-card-img"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRG0ccQONshQ-JvLvy8Skg4CblzENIFk2W_w&s"
+            alt="10 oz Striploin Steak" loading="lazy">
+          <div class="photo-card-body">
+            <h3>10 oz Striploin Steak</h3>
+            <p>Juicy hand-cut striploin grilled to your liking, served with sides.</p>
+            <div class="card-price-row">
+              <span class="card-price">$32.00</span>
+              <span class="card-price-note">7 oz for $24.00</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-card">
+          <img class="photo-card-img"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqPb4q5Z72Hrr4ECdmFXfaUvrpCqYJZe1pYQ&s"
+            alt="Fish and Chips" loading="lazy">
+          <div class="photo-card-body">
+            <h3>Fish and Chips</h3>
+            <p>Large piece of in-house battered fish with fresh-cut fries &amp; tartar sauce.</p>
+            <div class="card-price-row">
+              <span class="card-price">$15.00</span>
+              <span class="card-price-note">Extra piece +$6</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-card">
+          <img class="photo-card-img"
+            src="https://images.unsplash.com/photo-1512838243191-e81e8f66f1fd?w=600&q=80"
+            alt="Fish Tacos" loading="lazy">
+          <div class="photo-card-body">
+            <h3>Fish Tacos</h3>
+            <p>3 seasoned fish tacos with a side of tortilla chips.</p>
+            <div class="card-price-row">
+              <span class="card-price">$20.00</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-card">
+          <img class="photo-card-img"
+            src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80"
+            alt="Hamburger Steak and Onions" loading="lazy">
+          <div class="photo-card-body">
+            <h3>Hamburger Steak &amp; Onions</h3>
+            <p>2 hamburger patties smothered in fried onions and rich brown gravy.</p>
+            <div class="card-price-row">
+              <span class="card-price">$22.00</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-card">
+          <img class="photo-card-img"
+            src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=600&q=80"
+            alt="Tenderloin Tips" loading="lazy">
+          <div class="photo-card-body">
+            <h3>Tenderloin Tips</h3>
+            <p>Tender, juicy tenderloin tips pub-style — a house favourite.</p>
+            <div class="card-price-row">
+              <span class="card-price">$22.00</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── DESSERTS ── -->
+  <section class="menu-section " style="padding-bottom:64px;">
+    <div class="container">
+      <div class="cat-banner">
+        <div>
+          <span class="cat-label">Something Sweet</span>
+          <h2>Desserts</h2>
+        </div>
+        <div class="cat-banner-bar"></div>
+      </div>
+
+      <div class="photo-grid">
+
+        <div class="photo-card">
+          <img class="photo-card-img"
+            src="https://www.foodnetwork.com/content/dam/images/food/fullset/2016/5/9/1/KC0911H_Two-Ingredient-Elephant-Ears_s4x3.jpg"
+            alt="Mule Ears Pastry" loading="lazy">
+          <div class="photo-card-body">
+            <h3>Mule Ears (Pastry)</h3>
+            <p>Our house-made signature pastry — a Mule classic you won't find anywhere else.</p>
+            <div class="card-price-row">
+              <span class="card-price">$10.00</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-card">
+          <img class="photo-card-img"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1-XxMD9qppcEUFA5-13AcnZPGvyuXhBi0ew&s"
+            alt="Apple Crisp" loading="lazy">
+          <div class="photo-card-body">
+            <h3>Apple Crisp</h3>
+            <p>Warm, golden apple crisp with a buttery oat topping.</p>
+            <div class="card-price-row">
+              <span class="card-price">$10.00</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-card">
+          <img class="photo-card-img"
+            src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=600&q=80"
+            alt="Cheesecake" loading="lazy">
+          <div class="photo-card-body">
+            <h3>Cheesecake</h3>
+            <p>Rich and creamy house cheesecake on a classic biscuit base.</p>
+            <div class="card-price-row">
+              <span class="card-price">$10.00</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-card">
+          <img class="photo-card-img"
+            src="https://dudefoods.com/wp-content/uploads/2025/03/DeepFriedCheesecake1.jpg" alt="Deep-Fried Cheesecake" loading="lazy">
+          <div class="photo-card-body">
+            <h3>Deep-Fried Cheesecake</h3>
+            <p>Golden crispy outside, creamy cheesecake inside. Indulgence at its best.</p>
+            <div class="card-price-row">
+              <span class="card-price">$12.00</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-card">
+          <img class="photo-card-img"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyiaKgm_rWUseu35OeByprTJSBGd0fT7L64A&s"
+            alt="Deep-Fried Mars Bar" loading="lazy">
+          <div class="photo-card-body">
+            <h3>Deep-Fried Mars Bar</h3>
+            <p>A beloved pub classic — chocolate, caramel and nougat in a crispy batter.</p>
+            <div class="card-price-row">
+              <span class="card-price">$12.00</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-card">
+          <img class="photo-card-img"
+            src="https://images.unsplash.com/photo-1564355808539-22fda35bed7e?w=600&q=80"
+            alt="White Choc Brownie Cake" loading="lazy">
+          <div class="photo-card-body">
+            <h3>White Choc. Brownie Cake</h3>
+            <p>Dense, fudgy brownie cake loaded with white chocolate chunks.</p>
+            <div class="card-price-row">
+              <span class="card-price">$10.00</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-card">
+          <img class="photo-card-img"
+            src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&q=80"
+            alt="Donut Balls" loading="lazy">
+          <div class="photo-card-body">
+            <h3>Donut Balls</h3>
+            <p>Light, pillowy bite-sized donut balls — perfect for sharing.</p>
+            <div class="card-price-row">
+              <span class="card-price">$10.00</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ── -->
+  <div class="menu-cta">
+    <div class="container">
+      <h2>Ready to order?</h2>
+      <p>Choose your favourites and we'll have them ready for you.</p>
+      <a href="order.html" class="btn btn-saffron">Place an Order</a>
+    </div>
+  </div>
+
+</main>
+
+<footer style="align-items:center;text-align:center;padding:32px 16px;background:var(--green);color:white;display:flex;flex-direction:column;gap:12px;">
+  <div class="footer-links">
+    <a href="about.html">About</a>
+    <a href="menulist.html">Menu</a>
+    <a href="order.html">Order</a>
+    <a href="contact.html">Contact</a>
+    <a href="sitemap.html">Sitemap</a>
+  </div>
+  <span>© The Mule Bar &amp; Grill · Sussex</span>
+</footer>
+
+</body>
+</html>

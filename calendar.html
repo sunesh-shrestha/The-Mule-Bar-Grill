@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events Calendar — The Mule Bar & Grill</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+
+    /* ---- CALENDAR TABLE ---- */
+    .cal-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 50px;
+      background-color: white;
+      border: 1px solid var(--cream-dark);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    /* Month title row */
+    .cal-table .month-row td {
+      background-color: var(--green);
+      color: white;
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+      padding: 14px;
+    }
+
+    /* Day name row */
+    .cal-table .day-names td {
+      background-color: var(--cream);
+      text-align: center;
+      font-size: 13px;
+      font-weight: bold;
+      color: var(--text-muted);
+      padding: 10px 4px;
+      border-bottom: 1px solid var(--cream-dark);
+    }
+
+    /* All date cells */
+    .cal-table td {
+      width: 14.28%;
+      height: 80px;
+      vertical-align: top;
+      padding: 8px;
+      border: 1px solid var(--cream-dark);
+      font-size: 14px;
+    }
+
+    /* Empty cells */
+    .cal-table td.empty {
+      background-color: var(--cream);
+    }
+
+    /* Day number */
+    .cal-table .day-num {
+      font-weight: bold;
+      font-size: 14px;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    /* Event tag inside cell */
+    .cal-table .event-tag {
+      display: block;
+      background-color: var(--saffron-lt);
+      color: #9a6318;
+      font-size: 11px;
+      font-weight: bold;
+      padding: 2px 5px;
+      border-radius: 4px;
+      margin-top: 3px;
+    }
+
+    /* ---- EVENT CARDS ---- */
+    .event-card {
+      background-color: white;
+      border: 1px solid var(--cream-dark);
+      border-left: 5px solid var(--saffron);
+      border-radius: var(--radius);
+      padding: 20px;
+      margin-bottom: 18px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .event-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      color: var(--green);
+      margin-bottom: 4px;
+    }
+
+    .event-card .event-date {
+      display: inline-block;
+      background-color: var(--saffron-lt);
+      color: var(--saffron);
+      font-size: 12px;
+      font-weight: bold;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-bottom: 10px;
+    }
+
+    .event-card p {
+      color: var(--text-muted);
+      font-size: 14px;
+      line-height: 1.7;
+      margin-bottom: 8px;
+    }
+
+    .event-card .event-time {
+      color: var(--green);
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    /* Specials list */
+    .specials-list {
+      list-style: none;
+      padding: 0;
+      margin: 8px 0 0 0;
+    }
+
+    .specials-list li {
+      padding: 6px 0;
+      border-bottom: 1px solid var(--cream-dark);
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .specials-list li:last-child {
+      border-bottom: none;
+    }
+
+    .specials-list li strong {
+      color: var(--text);
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a href="home.html" class="nav-brand">
+    <span class="nav-brand-icon">
+      <img src="https://img1.wsimg.com/isteam/ip/c37bc47f-5d77-4b1c-9dd4-02d4ca72ed7f/The%20Mule%20Logo%20Circle.png/:/rs=w:315,h:210,cg:true,m/cr=w:315,h:210/qt=q:95" alt="The Mule Bar & Grill Logo">
+    </span>
+    The Mule Bar & Grill
+  </a>
+  <ul class="nav-links">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li class="nav-dropdown">
+      <a href="#" class="active">Menu</a>
+      <div class="dropdown-panel">
+        <a href="calendar.html">Calendar</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="menulist.html">Menu List</a>
+      </div>
+    </li>
+    <li><a href="order.html">Order</a></li>
+    <li><a href="location.html">Location</a></li>
+    <li><a href="sitemap.html">Sitemap</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE BANNER -->
+<div class="page-header">
+  <div class="container page-header-inner">
+    <h1>Events Calendar</h1>
+    <p>Live music, weekly specials, and community events</p>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<main>
+  <section class="section">
+    <div class="container">
+
+      <!-- CALENDAR TABLE -->
+      <p class="section-label">June 2026</p>
+      <h2 class="section-title">This month</h2>
+      <div class="title-bar"></div>
+
+      <table class="cal-table">
+
+        <!-- Month header -->
+        <tr class="month-row">
+          <td colspan="7">June 2026</td>
+        </tr>
+
+        <!-- Day names -->
+        <tr class="day-names">
+          <td>Sun</td>
+          <td>Mon</td>
+          <td>Tue</td>
+          <td>Wed</td>
+          <td>Thu</td>
+          <td>Fri</td>
+          <td>Sat</td>
+        </tr>
+
+        <!-- Week 1 — June starts on a Monday -->
+        <tr>
+          <td class="empty"></td>
+          <td><span class="day-num">1</span></td>
+          <td><span class="day-num">2</span></td>
+          <td><span class="day-num">3</span></td>
+          <td><span class="day-num">4</span></td>
+          <td><span class="day-num">5</span><span class="event-tag"> Karaoke</span></td>
+          <td><span class="day-num">6</span></td>
+        </tr>
+
+        <!-- Week 2 -->
+        <tr>
+          <td><span class="day-num">7</span></td>
+          <td><span class="day-num">8</span></td>
+          <td><span class="day-num">9</span></td>
+          <td><span class="day-num">10</span></td>
+          <td><span class="day-num">11</span></td>
+          <td><span class="day-num">12</span><span class="event-tag"> Karaoke</span></td>
+          <td><span class="day-num">13</span><span class="event-tag"> Julian Austin</span></td>
+        </tr>
+
+        <!-- Week 3 -->
+        <tr>
+          <td><span class="day-num">14</span></td>
+          <td><span class="day-num">15</span></td>
+          <td><span class="day-num">16</span></td>
+          <td><span class="day-num">17</span></td>
+          <td><span class="day-num">18</span></td>
+          <td><span class="day-num">19</span><span class="event-tag"> Karaoke</span></td>
+          <td><span class="day-num">20</span></td>
+        </tr>
+
+        <!-- Week 4 -->
+        <tr>
+          <td><span class="day-num">21</span></td>
+          <td><span class="day-num">22</span></td>
+          <td><span class="day-num">23</span></td>
+          <td><span class="day-num">24</span></td>
+          <td><span class="day-num">25</span></td>
+          <td><span class="day-num">26</span><span class="event-tag"> Karaoke</span></td>
+          <td><span class="day-num">27</span></td>
+        </tr>
+
+        <!-- Week 5 -->
+        <tr>
+          <td><span class="day-num">28</span></td>
+          <td><span class="day-num">29</span></td>
+          <td><span class="day-num">30</span></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+        </tr>
+
+      </table>
+
+      <!-- EVENTS LIST -->
+      <p class="section-label">Upcoming</p>
+      <h2 class="section-title">Events this month</h2>
+      <div class="title-bar"></div>
+
+      <!-- Event 1: Karaoke -->
+      <div class="event-card">
+        <h3>Karaoke Night with Jo Jenkins</h3>
+        <span class="event-date">Every Friday</span>
+        <p>Karaoke is back every Friday night, hosted by Jo Jenkins! Singers get ballots for a chance to win Mule Gift Cards and Sussex Fundyfest passes.</p>
+        <p class="event-time"> Every Friday night &middot; Walk-in welcome</p>
+      </div>
+
+      <!-- Event 2: Julian Austin -->
+      <div class="event-card">
+        <h3>Julian Austin LIVE</h3>
+        <span class="event-date">Saturday, June 13</span>
+        <p>Country music star Julian Austin performs live at The Mule. Tickets available at The Mule bar or online through Eventbrite.</p>
+        <p class="event-time"> Saturday June 13 &middot; Tickets required</p>
+      </div>
+
+      <!-- Event 3: Daily Specials -->
+      <div class="event-card">
+        <h3>Weekly Daily Specials</h3>
+        <span class="event-date">Every Week &middot; 4pm to Close</span>
+        <p>With drink purchase. Available every week:</p>
+        <ul class="specials-list">
+          <li><strong>Monday</strong> &mdash; Poutine Night &middot; $14</li>
+          <li><strong>Tuesday</strong> &mdash; Turkey Night &middot; $14</li>
+          <li><strong>Wednesday</strong> &mdash; Super Wing &amp; Nacho Night &middot; $14</li>
+          <li><strong>Thursday</strong> &mdash; Super Wing Night &middot; $8</li>
+          <li><strong>Friday</strong> &mdash; Steak Night &middot; $10</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer style="align-items: center; text-align: center; padding: 32px 16px; background: var(--green); color: white; display: flex; flex-direction: column; gap: 12px;">
+  <div class="footer-links">
+    <a href="about.html">About</a>
+    <a href="menulist.html">Menu</a>
+    <a href="order.html">Order</a>
+    <a href="contact.html">Contact</a>
+    <a href="sitemap.html">Sitemap</a>
+  </div>
+  <span>&copy; The Mule Bar &amp; Grill &middot; Sussex</span>
+</footer>
+
+</body>
+</html>
