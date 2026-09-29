@@ -1,11 +1,9 @@
-# 🍺 The Mule Bar & Grill
+# The Mule Bar & Grill
 
 A multi-page restaurant website for a pub-style bar and grill in Sussex, NB, with an interactive online ordering page.
 
-**🔗 Live demo:** [add your GitHub Pages link]
+**Live demo:** [[add your GitHub Pages link](https://sunesh-shrestha.github.io/The-Mule-Bar-Grill/)]
 
-![Home page](screenshots/home.png)
-![Order page](screenshots/order.png)
 
 ## What it does
 
@@ -49,4 +47,5 @@ A multi-page restaurant website for a pub-style bar and grill in Sussex, NB, wit
 
 ## Author
 
-**Sunesh Shrestha** · [LinkedIn](add-link) · [Portfolio](add-link)
+**Sunesh Shrestha** · [LinkedIn](www.linkedin.com/in/
+sunesh-prasad-shrestha-346728360) 
