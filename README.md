@@ -2,7 +2,7 @@
 
 A multi-page restaurant website for a pub-style bar and grill in Sussex, NB, with an interactive online ordering page.
 
-**Live demo:** [[add your GitHub Pages link](https://sunesh-shrestha.github.io/The-Mule-Bar-Grill/)]
+**Live demo:** [[The Mule Bar Grill](https://sunesh-shrestha.github.io/The-Mule-Bar-Grill/)]
 
 
 ## What it does
